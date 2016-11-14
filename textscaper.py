@@ -28,8 +28,12 @@ def getAllResults(keyword,pageNo):
         soup = BeautifulSoup(resp.text)
         value = soup.findAll("span", {"class": "quickLookGridItemFullName hide"})
 
-        for item in value:
-            print item.text
+        try:
+            for item in value:
+                print item.text
+        except:
+            pass
+        
 
     else:
         print 'Invalid Url'
