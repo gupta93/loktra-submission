@@ -15,12 +15,12 @@ for i in range(len(letters)):
 
 
 
-ans = itertools.combinations(query,2)
+ans = itertools.combinations(query,k)
 count_total = 0.0
 match_count=  0
 for a in ans:
     a = list(a)
-
+    print a
     for elem in a:
         if elem in required['a']:
 
