@@ -7,11 +7,7 @@ total = set(letters)
 r= len(total)
 query = ''.join(str(i) for i in range(1,n+1))
 k = int(raw_input().strip())
-required={}
-required['a'] = []
-for i in range(len(letters)):
-    if letters[i]=='a':
-        required['a'].append(str(i+1))
+
 
 
 
@@ -22,7 +18,7 @@ for a in ans:
     a = list(a)
     print a
     for elem in a:
-        if elem in required['a']:
+        if letters[int(elem)-1]=='a':
 
          match_count+=1
          break
